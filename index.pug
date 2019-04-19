@@ -1,0 +1,324 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+    title resume
+    style.
+      @font-face {
+        font-family: 'sofia';
+        src: url('/sofiabold.ttf');
+        font-weight: 700;
+      }
+      @font-face {
+        font-family: 'sofia';
+        src: url('/sofia.ttf');
+        font-weight: 600;
+      }
+      @font-face {
+        font-family: 'sofia';
+        src: url('/sofialight.ttf');
+      }
+      body {
+        background: grey;
+        font-family: "sofia", Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      #sidebar {
+        background: black;
+        min-width: 2.2in;
+        padding: 1.2rem;
+        color: #FAFAFA
+      }
+      #name {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        font-size: 2rem;
+        text-align: center;
+        border-bottom: 1px solid white
+      }
+      #sidebar ul {
+        line-height: 1.5rem;
+        padding-left: 0;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem
+      }
+      #contact li {
+        list-style-type: none;
+      }
+      #skills .title {
+        text-decoration: underline;
+        margin-bottom: 0.25rem
+      }
+      #skills ul {
+        margin-top: 0.5rem
+      }
+      #skills li {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between
+      }
+      .stars {
+        display: none;
+        align-items: center;
+        justify-content: flex-end;
+
+      }
+      .stars img {
+        margin: 0;
+        height: 8px;
+        margin-left: 2px
+      }
+      #main {
+        flex-grow: 1;
+        background: #FAFAFA;
+        padding: 1.3rem;
+        padding-right: 1.5rem;
+        display: flex;
+        line-height: 1.41rem;
+        flex-direction: column;
+      }
+      .project {
+        margin-bottom: 0.8rem
+      }
+      .e-head, .project-head {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between
+      }
+      #card-container {
+        display: flex;
+        flex-direction: row
+      }
+      #card-container > :not(:first-child):not(:last-child) {
+        margin: 8px;
+      }
+      .card {
+        flex-basis: 100%;
+        flex-grow: 1;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+        border: 1px solid rgba(0,0,0,0.2);
+      }
+      .card-title, .card-when {
+        font-size: 0.9rem;
+        font-weight: 100
+      }
+      .card-when {
+        align-
+      }
+      .card-description {
+        flex-grow: 1;
+        font-weight: 600;
+        margin-top: 0.1rem;
+        margin-bottom: 0.4rem
+      }
+      .section-header {
+        display: flex;
+      }
+      .section-header > .title {
+        font-size: 1.2rem;
+      }
+      .e-head, .project-head {
+        margin-top: 0.6rem;
+        font-weight: 700
+      }
+      .section-header .seperator {
+        background: black;
+        height: 1px;
+        align-self: center;
+        margin-left: 0.5rem;
+        flex-grow: 1
+      }
+      .section {
+        margin-bottom: 1rem
+      }
+      #container {
+        flex-direction: row;
+        display: flex;
+        width: 8.5in;
+        height: 11in;
+        border: 1px solid black;
+        margin: 0 auto
+      }
+      img {
+        height: 16px;
+        transform: translateY(25%);
+        margin-right: 8px;
+        -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+        filter: invert(100%)
+      }
+  body
+    #container
+      #sidebar
+        #name
+          | Aaron 
+          br
+          | Huang
+        #subtitle
+          | Data and Computer Science Student 
+          | @ UC Berkeley
+        #contact
+          ul
+            li
+              img(src="/ico/mail.svg" )
+              | aahuang@berkeley.edu
+            li
+              img(src="/ico/smartphone.svg" )
+              | 415.812.6317
+            li
+              img(src="/ico/linkedin.svg" )
+              | aaronkh
+            li
+              img(src="/ico/github.svg" )
+              | aaronkh
+        #skills
+          .title
+            | Skills
+          ul
+            li
+              div HTML5/CSS/JS
+              .stars
+                each i in [1,1,1,1,1] 
+                  if i
+                    img(src="/ico/on.svg")
+                  else
+                    img(src="/ico/off.svg")
+            li
+              div NodeJS
+              .stars
+                each i in [1,1,1,1,1] 
+                  if i
+                    img(src="/ico/on.svg")
+                  else
+                    img(src="/ico/off.svg")
+            li
+              div Python
+              .stars
+                each i in [1,1,1,1,1] 
+                  if i
+                    img(src="/ico/on.svg")
+                  else
+                    img(src="/ico/off.svg")
+            li
+              div Java
+              .stars
+                each i in [1,1,1,1,1] 
+                  if i
+                    img(src="/ico/on.svg")
+                  else
+                    img(src="/ico/off.svg")
+            li
+              div Android
+              .stars
+                each i in [1,1,1,1,0] 
+                  if i
+                    img(src="/ico/on.svg")
+                  else
+                    img(src="/ico/off.svg")
+            li
+              div React + React Native
+      #main
+        #e.section
+          .section-header
+            .title Experience & Education
+            .seperator
+          #e-container
+            .e-head
+              .e-title Blindsight (Mobile Developemnt)
+              .e-date jun 2018 - current
+            .e-description
+              | Created an Android app that allows blind people 
+              | to interface with a smartwatch device to assist the blind via Bluetooth
+            .e-head
+              .e-title Project Loaf (Mobile Developemnt)
+              .e-date jun 2017 - aug 2017
+            .e-description 
+              | Helped design and develop an Android app that allows storekeepers 
+              | to track and manage customers using WiFi and Bluetooth probe requests
+            .e-head
+              .e-title Data Science Society (Member)
+              .e-date jan 2019 - current
+            .e-description 
+              | Analyzed and presented crime data and gun control data in the United States using
+              | Python and JavaScript (Pandas, NumPy, d3.js)
+            .e-head
+              .e-title UC Berkeley (Student)
+              .e-date aug 2018 - current
+            .e-description 
+              | First year intended computer science and data science major
+              br
+              | Planned graduation in May 2022
+        #cards.section
+          .section-header
+            .title Relevant Coursework
+            .seperator
+          #card-container
+            
+            .card
+              .card-title
+                | DATA 8
+              .card-description
+                | Foundations of Data Science
+              .card-when
+                | Fall 2018
+            .card
+              .card-title
+                | EE 16A
+              .card-description
+                | Designing Information Devices and Systems
+              .card-when
+                | Spring 2019
+            .card
+              .card-title
+                | CS 61B
+              .card-description
+                | Data Structures
+              .card-when
+                | Spring 2019
+        #projects.section
+          .section-header
+            .title Projects
+            .seperator
+          .project
+            .project-head
+              .project-name nowo's ark
+              .project-date HackSC (Apr 2019)
+            .project-desc
+              | A cheap flood alert and detection device using a ABS pipe, a dragonboard, 
+              | Twilio SMS API, and a Cloudflare serverless worker 
+              br
+              em (Awarded Cloudflare Best Use of Serverless and Best Use of Qualcomm 410c Dragonboard)
+          .project
+            .project-head
+              .project-name Blindsight
+              .project-date TechCrunch Hackathon (Sep 2018)
+            .project-desc
+              | An assistive smartwatch-like device for
+              | the blind using machine learning algorithms, Bluetooth, and haptic feedback
+              br
+              em (Awarded Visa API, HERE Mobility SDK, and semi-finalist awards)
+          .project
+            .project-head
+              .project-name Muicrowave
+              .project-date SLO Hacks (Feb 2019)
+            .project-desc
+              | A Craigslist-salvaged microwave turned smart through
+              | Amazon Alexa commands, computer vision, and surge pricing 
+              br
+              em (Awarded Best IoT Hack and Best Use of Qualcomm 410c Dragonboard)
+          .project
+            .project-head
+              .project-name CheaterTI
+              .project-date SFHacks (Mar 2019)
+            .project-desc
+              | A TI-84 graphing calculator messaging, Lyft ride-hailing, 
+              | and image recognition capabilities using an Arduino and Dragonboard
+              br
+              em (Placed Top 6 Overall)
