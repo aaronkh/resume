@@ -88,37 +88,6 @@ html
         flex-direction: row;
         justify-content: space-between
       }
-      #card-container {
-        display: flex;
-        flex-direction: row
-      }
-      #card-container > :not(:first-child):not(:last-child) {
-        margin: 8px;
-      }
-      .card {
-        flex-basis: 100%;
-        flex-grow: 1;
-        margin-top: 8px;
-        margin-bottom: 8px;
-        padding: 8px;
-        display: flex;
-        flex-direction: column;
-        border-radius: 8px;
-        border: 1px solid rgba(0,0,0,0.2);
-      }
-      .card-title, .card-when {
-        font-size: 0.9rem;
-        font-weight: 100
-      }
-      .card-when {
-        align-
-      }
-      .card-description {
-        flex-grow: 1;
-        font-weight: 600;
-        margin-top: 0.1rem;
-        margin-bottom: 0.4rem
-      }
       .section-header {
         display: flex;
       }
@@ -154,6 +123,20 @@ html
         -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
         filter: invert(100%)
       }
+      .card * {
+        display: inline
+      }
+
+      #card-container {
+        padding-top: 6px
+      }
+
+      .card-title::after {
+        content: " — "
+      }
+      .card-description {
+          font-weight: bold
+      }
   body
     #container
       #sidebar
@@ -162,7 +145,7 @@ html
           br
           | Huang
         #subtitle
-          | Data and Computer Science Student 
+          | Computer Science Student 
           | @ UC Berkeley
         #contact
           ul
@@ -184,44 +167,14 @@ html
           ul
             li
               div HTML5/CSS/JS
-              .stars
-                each i in [1,1,1,1,1] 
-                  if i
-                    img(src="/ico/on.svg")
-                  else
-                    img(src="/ico/off.svg")
             li
               div NodeJS
-              .stars
-                each i in [1,1,1,1,1] 
-                  if i
-                    img(src="/ico/on.svg")
-                  else
-                    img(src="/ico/off.svg")
             li
               div Python
-              .stars
-                each i in [1,1,1,1,1] 
-                  if i
-                    img(src="/ico/on.svg")
-                  else
-                    img(src="/ico/off.svg")
             li
               div Java
-              .stars
-                each i in [1,1,1,1,1] 
-                  if i
-                    img(src="/ico/on.svg")
-                  else
-                    img(src="/ico/off.svg")
             li
               div Android
-              .stars
-                each i in [1,1,1,1,0] 
-                  if i
-                    img(src="/ico/on.svg")
-                  else
-                    img(src="/ico/off.svg")
             li
               div React + React Native
       #main
@@ -231,57 +184,46 @@ html
             .seperator
           #e-container
             .e-head
-              .e-title Blindsight (Mobile Developemnt)
+              .e-title Soracom (Software Engineering Intern)
               .e-date jun 2018 - current
             .e-description
-              | Created an Android app that allows blind people 
-              | to interface with a smartwatch device to assist the blind via Bluetooth
+              | Added surge pricing, location tracking, and Android app controls 
+              | onto an electric scooter using React Native, a Soracom Air SIM, and AWS 
+            .e-head
+              .e-title UC Berkeley (Student)
+              .e-date aug 2018 - current
+            .e-description 
+              | Second year intended computer science major
+              br
+              | Planned graduation in May 2022
+            .e-head
+              .e-title Data Science Society (General Member)
+              .e-date jan 2019 - jun 2019
+            .e-description 
+              | Analyzed and presented crime data and gun control data in the US using
+              | Python and JavaScript (Pandas, NumPy, d3.js)
             .e-head
               .e-title Project Loaf (Mobile Developemnt)
               .e-date jun 2017 - aug 2017
             .e-description 
               | Helped design and develop an Android app that allows storekeepers 
               | to track and manage customers using WiFi and Bluetooth probe requests
-            .e-head
-              .e-title Data Science Society (Member)
-              .e-date jan 2019 - current
-            .e-description 
-              | Analyzed and presented crime data and gun control data in the United States using
-              | Python and JavaScript (Pandas, NumPy, d3.js)
-            .e-head
-              .e-title UC Berkeley (Student)
-              .e-date aug 2018 - current
-            .e-description 
-              | First year intended computer science and data science major
-              br
-              | Planned graduation in May 2022
         #cards.section
           .section-header
             .title Relevant Coursework
             .seperator
           #card-container
-            
             .card
-              .card-title
-                | DATA 8
+              //- .card-title
+              //-   | DATA 8
               .card-description
-                | Foundations of Data Science
-              .card-when
-                | Fall 2018
+                | Foundations of Data Science (DATA 8)
             .card
-              .card-title
-                | EE 16A
               .card-description
-                | Designing Information Devices and Systems
-              .card-when
-                | Spring 2019
+                | Designing Information Devices and Systems (EE 16A)
             .card
-              .card-title
-                | CS 61B
               .card-description
-                | Data Structures
-              .card-when
-                | Spring 2019
+                | Data Structures (CS 61B)
         #projects.section
           .section-header
             .title Projects
@@ -291,34 +233,36 @@ html
               .project-name nowo's ark
               .project-date HackSC (Apr 2019)
             .project-desc
-              | A cheap flood alert and detection device using a ABS pipe, a dragonboard, 
-              | Twilio SMS API, and a Cloudflare serverless worker 
+              | Built an inexpensive flood alert and detection system for third world countries
+              | using a PVC pipe, a Qualcomm Dragonboard, Twilio SMS API, and a Cloudflare serverless worker 
               br
               em (Awarded Cloudflare Best Use of Serverless and Best Use of Qualcomm 410c Dragonboard)
-          .project
-            .project-head
-              .project-name Blindsight
-              .project-date TechCrunch Hackathon (Sep 2018)
-            .project-desc
-              | An assistive smartwatch-like device for
-              | the blind using machine learning algorithms, Bluetooth, and haptic feedback
-              br
-              em (Awarded Visa API, HERE Mobility SDK, and semi-finalist awards)
-          .project
-            .project-head
-              .project-name Muicrowave
-              .project-date SLO Hacks (Feb 2019)
-            .project-desc
-              | A Craigslist-salvaged microwave turned smart through
-              | Amazon Alexa commands, computer vision, and surge pricing 
-              br
-              em (Awarded Best IoT Hack and Best Use of Qualcomm 410c Dragonboard)
-          .project
-            .project-head
-              .project-name CheaterTI
-              .project-date SFHacks (Mar 2019)
-            .project-desc
-              | A TI-84 graphing calculator messaging, Lyft ride-hailing, 
-              | and image recognition capabilities using an Arduino and Dragonboard
-              br
-              em (Placed Top 6 Overall)
+            .project
+              .project-head
+                .project-name Muicrowave
+                .project-date SLO Hacks (Feb 2019)
+              .project-desc
+                | Turned a Craigslist-salvaged microwave smart with
+                | an Amazon Alexa skill, computer vision, and a surge pricing payment system
+                br
+                em (Awarded Best IoT Hack and Best Use of Qualcomm 410c Dragonboard)
+            .project
+              .project-head
+                .project-name PictRNNary
+                .project-date CalHacks 5.0 (Nov 2018)
+              .project-desc
+                | Created a web app for an AI-powered pictionary game with speech and speaker recognition.
+                | Powered by Microsoft Azure APIs, a Node.js backend, and a recurrent neural network
+                | for generating images.
+                br
+                em (Awarded Best Use of Microsoft and Regional Microsoft Imagine Cup Semifinalist awards)
+            .project
+              .project-head
+                .project-name Blindsight
+                .project-date TechCrunch Hackathon (Sep 2018)
+              .project-desc
+                | Built an Android app with machine learning algorithms, Bluetooth, and haptic feedback
+                | for an assistive smartwatch-like device for the visually impaired 
+                br
+                em (Awarded Visa API, HERE Mobility SDK, and semi-finalist awards)
+            
