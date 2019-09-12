@@ -1,282 +1,296 @@
-<!doctypehtml>
-  <meta charset=UTF-8>
-  <meta content="IE=edge,chrome=1" http-equiv=X-UA-Compatible>
-  <meta content="width=device-width,initial-scale=1" name=viewport>
-  <title>resume</title>
-  <style>
-    @font-face {
-      font-family: sofia;
-      src: url(./sofiabold.ttf);
-      font-weight: 700
-    }
+<!DOCTYPE html>
+<html>
 
-    @font-face {
-      font-family: sofia;
-      src: url(./sofia.ttf);
-      font-weight: 600
-    }
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>resume</title>
+    <style>
+        @font-face {
+            font-family: 'sofia';
+            src: url('./sofiabold.ttf');
+            font-weight: 700;
+        }
 
-    @font-face {
-      font-family: sofia;
-      src: url(./sofialight.ttf)
-    }
+        @font-face {
+            font-family: 'sofia';
+            src: url('./sofia.ttf');
+            font-weight: 600;
+        }
 
-    body {
-      background: grey;
-      font-family: sofia, Helvetica, sans-serif;
-      margin: 0;
-      padding: 0
-    }
+        @font-face {
+            font-family: 'sofia';
+            src: url('./sofialight.ttf');
+        }
 
-    #sidebar {
-      background: #000;
-      min-width: 2.2in;
-      padding: 1.2rem;
-      color: #fafafa
-    }
+        body {
+            background: white;
+            font-family: "sofia", Helvetica, sans-serif;
+            margin: 0;
+            font-size: 13.3px;
+            padding: 0;
+            line-height: 1.13;
+        }
 
-    #name {
-      margin-bottom: 1rem;
-      padding-bottom: 1rem;
-      font-size: 2rem;
-      text-align: center;
-      border-bottom: 1px solid #fff
-    }
+        #sidebar {
+            background: black;
+            min-width: 2.2in;
+            padding: 1.2rem;
+            color: #FAFAFA
+        }
 
-    #sidebar ul {
-      line-height: 1.5rem;
-      padding-left: 0;
-      margin-top: 1.5rem;
-      margin-bottom: 1.5rem
-    }
+        #name {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            font-size: 2rem;
+            text-align: center;
+            border-bottom: 1px solid white
+        }
 
-    #contact li {
-      list-style-type: none
-    }
+        #sidebar ul {
+            line-height: 1.5rem;
+            padding-left: 0;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem
+        }
 
-    #skills .title {
-      text-decoration: underline;
-      margin-bottom: .25rem
-    }
+        #contact li {
+            list-style-type: none;
+        }
 
-    #skills ul {
-      margin-top: .5rem
-    }
+        #skills .title {
+            text-decoration: underline;
+            margin-bottom: 0.25rem
+        }
 
-    #skills li {
-      list-style-type: none;
-      display: flex;
-      justify-content: space-between
-    }
+        #skills ul {
+            margin-top: 0.5rem
+        }
 
-    .stars {
-      display: none;
-      align-items: center;
-      justify-content: flex-end
-    }
+        #skills li {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between
+        }
 
-    .stars img {
-      margin: 0;
-      height: 8px;
-      margin-left: 2px
-    }
+        .stars {
+            display: none;
+            align-items: center;
+            justify-content: flex-end;
+        }
 
-    #main {
-      flex-grow: 1;
-      background: #fafafa;
-      padding: 1.3rem;
-      padding-right: 1.5rem;
-      display: flex;
-      line-height: 1.41rem;
-      flex-direction: column
-    }
+        .stars img {
+            margin: 0;
+            height: 8px;
+            margin-left: 2px
+        }
 
-    .project {
-      margin-bottom: .8rem
-    }
+        #main {
+            flex-grow: 1;
+            background: #fafafa;
+            padding: 1.3rem;
+            padding-right: 1.5rem;
+            display: flex;
+            line-height: 1.3rem;
+            flex-direction: column;
+        }
 
-    .e-head,
-    .project-head {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between
-    }
+        .project {
+            margin-bottom: 0.8rem
+        }
 
-    .section-header {
-      display: flex
-    }
+        .e-head,
+        .project-head {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between
+        }
 
-    .section-header>.title {
-      font-size: 1.2rem
-    }
+        .section-header {
+            display: flex;
+        }
 
-    .e-head,
-    .project-head {
-      margin-top: .6rem;
-      font-weight: 700
-    }
+        .section-header>.title {
+            font-size: 1.2rem;
+        }
 
-    .section-header .seperator {
-      background: #000;
-      height: 1px;
-      align-self: center;
-      margin-left: .5rem;
-      flex-grow: 1
-    }
+        .e-head,
+        .project-head {
+            margin-top: 0.6rem;
+            font-weight: 700
+        }
 
-    .section {
-      margin-bottom: 1rem
-    }
+        .section-header .seperator {
+            background: black;
+            height: 1px;
+            align-self: center;
+            margin-left: 0.5rem;
+            flex-grow: 1
+        }
 
-    #container {
-      flex-direction: row;
-      display: flex;
-      width: 8.5in;
-      height: 11in;
-      border: 1px solid #000;
-      margin: 0 auto
-    }
+        .section {
+            margin-bottom: 1rem
+        }
 
-    img {
-      height: 16px;
-      transform: translateY(25%);
-      margin-right: 8px;
-      -webkit-filter: invert(100%);
-      filter: invert(100%)
-    }
+        #container {
+            flex-direction: row;
+            display: flex;
+            width: 8.5in;
+            height: 11in;
+            margin: 0 auto
+        }
 
-    .card * {
-      display: inline
-    }
+        img {
+            height: 16px;
+            transform: translateY(25%);
+            margin-right: 8px;
+            -webkit-filter: invert(100%);
+            /* safari 6.0 - 9.0 */
+            filter: invert(100%);
+            background: white;
+        }
 
-    #card-container {
-      padding-top: 6px
-    }
+        .card * {
+            display: inline
+        }
 
-    .card-title::after {
-      content: " — "
-    }
+        #card-container {
+            padding-top: 6px
+        }
 
-    .card-description {
-      font-weight: 700
-    }
-  </style>
-  <div id=container>
-    <div id=sidebar>
-      <div id=name>Aaron<br>Huang</div>
-      <div id=subtitle>Computer Science Student @ UC Berkeley</div>
-      <div id=contact>
-        <ul>
-          <li><img src="./ico/mail.svg">aahuang@berkeley.edu <li><img src="./ico/smartphone.svg">415.812.6317 <li><img
-              src="./ico/linkedin.svg">aaronkh <li><img src="./ico/github.svg">aaronkh </ul> </div> <div id=skills>
-            <div class=title>Skills</div>
-            <ul>
-              <li>
-                <div>HTML5/CSS/JS</div>
-              <li>
-                <div>NodeJS</div>
-              <li>
-                <div>Python</div>
-              <li>
-                <div>Java</div>
-              <li>
-                <div>Android</div>
-              <li>
-                <div>React + React Native</div>
-            </ul>
-      </div>
+        .card-title::after {
+            content: " — "
+        }
+
+        .card-description {
+            font-weight: bold
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="sidebar">
+            <div id="name">Aaron <br>Huang</div>
+            <div id="subtitle">Computer Science Student @ UC Berkeley</div>
+            <div id="contact">
+                <ul>
+                    <li><img src="./ico/mail.svg">aahuang@berkeley.edu</li>
+                    <li><img src="./ico/smartphone.svg">415.812.6317</li>
+                    <li><img src="./ico/linkedin.svg">aaronkh</li>
+                    <li><img src="./ico/github.svg">aaronkh</li>
+                </ul>
+            </div>
+            <div id="skills">
+                <div class="title">Skills</div>
+                <ul>
+                    <li>
+                        <div>HTML5/CSS/JS</div>
+                    </li>
+                    <li>
+                        <div>NodeJS</div>
+                    </li>
+                    <li>
+                        <div>Python</div>
+                    </li>
+                    <li>
+                        <div>Java</div>
+                    </li>
+                    <li>
+                        <div>Android</div>
+                    </li>
+                    <li>
+                        <div>React + React Native</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            <div class="section" id="e">
+                <div class="section-header">
+                    <div class="title">Experience & Education</div>
+                    <div class="seperator"></div>
+                </div>
+                <div id="e-container">
+                    <div class="e-head">
+                        <div class="e-title">Soracom (Software Engineering Intern)</div>
+                        <div class="e-date">jun 2018 - current</div>
+                    </div>
+                    <div class="e-description">Added surge pricing, location tracking, and Android app controls onto an electric scooter with React Native, Soracom's cellular services, and AWS. Published articles and videos about the development process on Hackernoon.</div>
+                    <div
+                        class="e-head">
+                        <div class="e-title">UC Berkeley (Student)</div>
+                        <div class="e-date">aug 2018 - current</div>
+                </div>
+                <div class="e-description"> Second year intended BA in Computer Science<br>Planned graduation in May 2022</div>
+                <div class="e-head">
+                    <div class="e-title">Data Science Society (General Member)</div>
+                    <div class="e-date">jan 2019 - jun 2019</div>
+                </div>
+                <div class="e-description"> Analyzed and presented crime data and gun control data in the US using Python and JavaScript (Pandas, NumPy, d3.js) for a biannual research symposium.
+                </div>
+                <div class="e-head">
+                    <div class="e-title">Project Loaf (Mobile Development)</div>
+                    <div class="e-date">jun 2017 - aug 2017</div>
+                </div>
+                <div class="e-description"> Designed and developed an Android app that allows storekeepers to manage and optimize foot traffic in stores. Used multiple Raspberry Pi Zero W's to track customers' location indoors using WiFi and Bluetooth probe requests.</div>
+            </div>
+        </div>
+        <div class="section" id="cards">
+            <div class="section-header">
+                <div class="title">Relevant Coursework</div>
+                <div class="seperator"></div>
+            </div>
+            <div id="card-container">
+                <div class="card">
+                    <div class="card-description">Principles and Techniques of Data Science (DATA 100)</div>
+                </div>
+                <div class="card">
+                    <div class="card-description">Designing Information Devices and Systems (EE 16A)</div>
+                </div>
+                <div class="card">
+                    <div class="card-description">Data Structures (CS 61B)</div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="projects">
+            <div class="section-header">
+                <div class="title">Projects</div>
+                <div class="seperator"></div>
+            </div>
+            <div class="project">
+                <div class="project-head">
+                    <div class="project-name">nowo's ark</div>
+                    <div class="project-date">HackSC (Apr 2019)</div>
+                </div>
+                <div class="project-desc">Built an inexpensive flood detection and alert system for third world countries using a PVC pipe, a Qualcomm Dragonboard, Twilio SMS API, and a Cloudflare serverless worker. Used OmniSci for data visualization and analysis.<br><em>(Awarded Cloudflare Best Use of Serverless and Best Use of Qualcomm 410c Dragonboard)</em></div>
+                <div
+                    class="project">
+                    <div class="project-head">
+                        <div class="project-name">Muicrowave</div>
+                        <div class="project-date">SLO Hacks (Feb 2019)</div>
+                    </div>
+                    <div class="project-desc">Built a web interface and Node.js Express server hosted on Google Cloud Platform to turn a Craigslist-salvaged microwave smart with an Amazon Alexa skill, computer vision, and a surge pricing payment system.<br><em>(Awarded Best IoT Hack and Best Use of Qualcomm 410c Dragonboard)</em></div>
+            </div>
+            <div class="project">
+                <div class="project-head">
+                    <div class="project-name">PictRNNary</div>
+                    <div class="project-date">CalHacks 5.0 (Nov 2018)</div>
+                </div>
+                <div class="project-desc">Created a web app for an AI-powered pictionary game with speech and speaker recognition. Powered by Microsoft Azure APIs, a Node.js backend, and a recurrent neural network for generating images.<br><em>(Awarded Best Use of Microsoft and Regional Microsoft Imagine Cup Semifinalist awards)</em></div>
+            </div>
+            <div class="project">
+                <div class="project-head">
+                    <div class="project-name">Blindsight</div>
+                    <div class="project-date">TechCrunch Hackathon (Sep 2018)</div>
+                </div>
+                <div class="project-desc">Built an Android app with speech and object recognition, Bluetooth support, and haptic feedback for an assistive smartwatch-like device for the visually impaired. Featured on Hackster.io, Makezine, CBS, and 2018 US-China Young Maker Competition.<br><em>(Awarded Visa API, HERE Mobility SDK, and semi-finalist awards)</em></div>
+            </div>
+        </div>
     </div>
-    <div id=main>
-      <div class=section id=e>
-        <div class=section-header>
-          <div class=title>Experience & Education</div>
-          <div class=seperator></div>
-        </div>
-        <div id=e-container>
-          <div class=e-head>
-            <div class=e-title>Soracom (Software Engineering Intern)</div>
-            <div class=e-date>jun 2018 - current</div>
-          </div>
-          <div class=e-description>Added surge pricing, location tracking, and Android app controls onto an electric
-            scooter using React Native, a Soracom Air SIM, and AWS</div>
-          <div class=e-head>
-            <div class=e-title>UC Berkeley (Student)</div>
-            <div class=e-date>aug 2018 - current</div>
-          </div>
-          <div class=e-description>Second year intended computer science major<br>Planned graduation in May 2022</div>
-          <div class=e-head>
-            <div class=e-title>Data Science Society (General Member)</div>
-            <div class=e-date>jan 2019 - jun 2019</div>
-          </div>
-          <div class=e-description>Analyzed and presented crime data and gun control data in the US using Python and
-            JavaScript (Pandas, NumPy, d3.js)</div>
-          <div class=e-head>
-            <div class=e-title>Project Loaf (Mobile Development)</div>
-            <div class=e-date>jun 2017 - aug 2017</div>
-          </div>
-          <div class=e-description>Helped design and develop an Android app that allows storekeepers to track and manage
-            customers using WiFi and Bluetooth probe requests</div>
-        </div>
-      </div>
-      <div class=section id=cards>
-        <div class=section-header>
-          <div class=title>Relevant Coursework</div>
-          <div class=seperator></div>
-        </div>
-        <div id=card-container>
-          <div class=card>
-            <div class=card-description>Principles and Techniques of Data Science (DATA 100)</div>
-          </div>
-          <div class=card>
-            <div class=card-description>Designing Information Devices and Systems (EE 16A)</div>
-          </div>
-          <div class=card>
-            <div class=card-description>Data Structures (CS 61B)</div>
-          </div>
-        </div>
-      </div>
-      <div class=section id=projects>
-        <div class=section-header>
-          <div class=title>Projects</div>
-          <div class=seperator></div>
-        </div>
-        <div class=project>
-          <div class=project-head>
-            <div class=project-name>nowo's ark</div>
-            <div class=project-date>HackSC (Apr 2019)</div>
-          </div>
-          <div class=project-desc>Built an inexpensive flood alert and detection system for third world countries using
-            a PVC pipe, a Qualcomm Dragonboard, Twilio SMS API, and a Cloudflare serverless worker<br><em>(Awarded
-              Cloudflare Best Use of Serverless and Best Use of Qualcomm 410c Dragonboard)</em></div>
-          <div class=project>
-            <div class=project-head>
-              <div class=project-name>Muicrowave</div>
-              <div class=project-date>SLO Hacks (Feb 2019)</div>
-            </div>
-            <div class=project-desc>Turned a Craigslist-salvaged microwave smart with an Amazon Alexa skill, computer
-              vision, and a surge pricing payment system<br><em>(Awarded Best IoT Hack and Best Use of Qualcomm 410c
-                Dragonboard)</em></div>
-          </div>
-          <div class=project>
-            <div class=project-head>
-              <div class=project-name>PictRNNary</div>
-              <div class=project-date>CalHacks 5.0 (Nov 2018)</div>
-            </div>
-            <div class=project-desc>Created a web app for an AI-powered pictionary game with speech and speaker
-              recognition. Powered by Microsoft Azure APIs, a Node.js backend, and a recurrent neural network for
-              generating images.<br><em>(Awarded Best Use of Microsoft and Regional Microsoft Imagine Cup Semifinalist
-                awards)</em></div>
-          </div>
-          <div class=project>
-            <div class=project-head>
-              <div class=project-name>Blindsight</div>
-              <div class=project-date>TechCrunch Hackathon (Sep 2018)</div>
-            </div>
-            <div class=project-desc>Built an Android app with machine learning algorithms, Bluetooth, and haptic
-              feedback for an assistive smartwatch-like device for the visually impaired<br><em>(Awarded Visa API, HERE
-                Mobility SDK, and semi-finalist awards)</em></div>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
+    </div>
+</body>
+
+</html>
