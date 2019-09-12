@@ -21,10 +21,12 @@ html
         src: url('/sofialight.ttf');
       }
       body {
-        background: grey;
+        background: white;
         font-family: "sofia", Helvetica, sans-serif;
         margin: 0;
+        font-size: 13.3px;
         padding: 0;
+        line-height: 1.13;
       }
       #sidebar {
         background: black;
@@ -73,11 +75,11 @@ html
       }
       #main {
         flex-grow: 1;
-        background: #FAFAFA;
+        background: #fafafa;
         padding: 1.3rem;
         padding-right: 1.5rem;
         display: flex;
-        line-height: 1.41rem;
+        line-height: 1.3rem;
         flex-direction: column;
       }
       .project {
@@ -113,7 +115,6 @@ html
         display: flex;
         width: 8.5in;
         height: 11in;
-        border: 1px solid black;
         margin: 0 auto
       }
       img {
@@ -121,7 +122,8 @@ html
         transform: translateY(25%);
         margin-right: 8px;
         -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
-        filter: invert(100%)
+        filter: invert(100%);
+        background: white;
       }
       .card * {
         display: inline
@@ -188,12 +190,13 @@ html
               .e-date jun 2018 - current
             .e-description
               | Added surge pricing, location tracking, and Android app controls 
-              | onto an electric scooter using React Native, a Soracom Air SIM, and AWS 
+              | onto an electric scooter with React Native, Soracom's cellular services, and AWS.
+              | Published articles and videos about the development process on Hackernoon.
             .e-head
               .e-title UC Berkeley (Student)
               .e-date aug 2018 - current
             .e-description 
-              | Second year intended computer science major
+              | Second year intended BA in Computer Science
               br
               | Planned graduation in May 2022
             .e-head
@@ -201,13 +204,15 @@ html
               .e-date jan 2019 - jun 2019
             .e-description 
               | Analyzed and presented crime data and gun control data in the US using
-              | Python and JavaScript (Pandas, NumPy, d3.js)
+              | Python and JavaScript (Pandas, NumPy, d3.js) for a biannual research
+              | symposium.
             .e-head
               .e-title Project Loaf (Mobile Development)
               .e-date jun 2017 - aug 2017
             .e-description 
-              | Helped design and develop an Android app that allows storekeepers 
-              | to track and manage customers using WiFi and Bluetooth probe requests
+              | Designed and developed an Android app that allows storekeepers 
+              | to manage and optimize foot traffic in stores. Used multiple Raspberry Pi Zero W's to track customers' 
+              | location indoors using WiFi and Bluetooth probe requests.
         #cards.section
           .section-header
             .title Relevant Coursework
@@ -231,8 +236,9 @@ html
               .project-name nowo's ark
               .project-date HackSC (Apr 2019)
             .project-desc
-              | Built an inexpensive flood alert and detection system for third world countries
-              | using a PVC pipe, a Qualcomm Dragonboard, Twilio SMS API, and a Cloudflare serverless worker 
+              | Built an inexpensive flood detection and alert system for third world countries
+              | using a PVC pipe, a Qualcomm Dragonboard, Twilio SMS API, and a Cloudflare serverless worker.
+              | Used OmniSci for data visualization and analysis.
               br
               em (Awarded Cloudflare Best Use of Serverless and Best Use of Qualcomm 410c Dragonboard)
             .project
@@ -240,8 +246,9 @@ html
                 .project-name Muicrowave
                 .project-date SLO Hacks (Feb 2019)
               .project-desc
-                | Turned a Craigslist-salvaged microwave smart with
-                | an Amazon Alexa skill, computer vision, and a surge pricing payment system
+                | Built a web interface and Node.js Express server hosted on Google Cloud Platform to 
+                | turn a Craigslist-salvaged microwave smart with
+                | an Amazon Alexa skill, computer vision, and a surge pricing payment system.
                 br
                 em (Awarded Best IoT Hack and Best Use of Qualcomm 410c Dragonboard)
             .project
@@ -259,8 +266,10 @@ html
                 .project-name Blindsight
                 .project-date TechCrunch Hackathon (Sep 2018)
               .project-desc
-                | Built an Android app with machine learning algorithms, Bluetooth, and haptic feedback
-                | for an assistive smartwatch-like device for the visually impaired 
+                | Built an Android app with speech and object recognition, 
+                | Bluetooth support, and haptic feedback
+                | for an assistive smartwatch-like device for the visually impaired. Featured on Hackster.io,
+                | Makezine, CBS, and 2018 US-China Young Maker Competition.
                 br
                 em (Awarded Visa API, HERE Mobility SDK, and semi-finalist awards)
             
