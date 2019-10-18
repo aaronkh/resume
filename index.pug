@@ -75,7 +75,7 @@ html
       }
       #main {
         flex-grow: 1;
-        background: #fafafa;
+        background: white;
         padding: 1.3rem;
         padding-right: 1.5rem;
         display: flex;
@@ -139,6 +139,23 @@ html
       .card-description {
           font-weight: bold
       }
+      #subtitle {
+        font-size: 1.2rem;
+        margin-bottom: -18px
+      }
+      #subtitle .sub {
+        font-size: 13.3px;
+        line-height: 1.2rem;
+        padding: 12px;
+        margin: 0;
+        margin-left: 10px
+      }
+      #subtitle .sub li {
+        padding-left: 4px
+      }
+      #sidebar > *:not(:first-child) {
+        margin-left: 6px
+      }
   body
     #container
       #sidebar
@@ -147,8 +164,10 @@ html
           br
           | Huang
         #subtitle
-          | Computer Science Student 
-          | @ UC Berkeley
+          span Student @ UC Berkeley
+          ul.sub
+            li Computer Science (B.A.)
+            li Graduating June 2022
         #contact
           ul
             li
@@ -179,33 +198,31 @@ html
               div Android
             li
               div React + React Native
+            li
+              div Git
       #main
         #e.section
           .section-header
-            .title Experience & Education
+            .title Experience
             .seperator
           #e-container
             .e-head
               .e-title Soracom (Software Engineering Intern)
-              .e-date jun 2018 - current
+              .e-date jun 2019 - current
             .e-description
-              | Added surge pricing, location tracking, and Android app controls 
-              | onto an electric scooter with React Native, Soracom's cellular services, and AWS.
+              | Added surge pricing, location tracking, and remote management
+              | onto an electric scooter using  Soracom's cellular services and AWS.
+              | Created an Android app with React Native and 
+              | Stripe API for accepting payments and unlocking the scooter.
               | Published articles and videos about the development process on Hackernoon.
-            .e-head
-              .e-title UC Berkeley (Student)
-              .e-date aug 2018 - current
-            .e-description 
-              | Second year intended BA in Computer Science
-              br
-              | Planned graduation in May 2022
             .e-head
               .e-title Data Science Society (General Member)
               .e-date jan 2019 - jun 2019
             .e-description 
-              | Analyzed and presented crime data and gun control data in the US using
-              | Python and JavaScript (Pandas, NumPy, d3.js) for a biannual research
-              | symposium.
+              | Determined the correlation between 
+              | congressional district, poverty, gun control strictness and gun injuries/deaths in the US with 
+              | bootstrapping and regression analysis. Used Python and JavaScript (Pandas, NumPy, d3.js) 
+              | for visualization and presentation at a biannual research symposium.
             .e-head
               .e-title Project Loaf (Mobile Development)
               .e-date jun 2017 - aug 2017
