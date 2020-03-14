@@ -5,6 +5,7 @@ html
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
     meta(name='viewport', content='width=device-width,initial-scale=1')
     title resume
+    link(href="head.css" rel="stylesheet")
     style.
       @font-face {
         font-family: 'sofia';
@@ -21,272 +22,221 @@ html
         src: url('./sofialight.ttf');
       }
       body {
-        background: white;
         font-family: "sofia", Helvetica, sans-serif;
         margin: 0;
-        font-size: 13.3px;
+        font-size: 13.5px;
         padding: 0;
         line-height: 1.13;
-      }
-      #sidebar {
-        background: black;
-        min-width: 2.2in;
-        padding: 1.2rem;
-        color: #FAFAFA
-      }
-      #name {
-        margin-bottom: 1rem;
-        padding-bottom: 1rem;
-        font-size: 2rem;
-        text-align: center;
-        border-bottom: 1px solid white
-      }
-      #sidebar ul {
-        line-height: 1.5rem;
-        padding-left: 0;
-        margin-top: 1.5rem;
-        margin-bottom: 1.5rem
-      }
-      #contact li {
-        list-style-type: none;
-      }
-      #skills .title {
-        text-decoration: underline;
-        margin-bottom: 0.25rem
-      }
-      #skills ul {
-        margin-top: 0.5rem
-      }
-      #skills li {
-        list-style-type: none;
-        display: flex;
-        justify-content: space-between
-      }
-      .stars {
-        display: none;
-        align-items: center;
-        justify-content: flex-end;
-
-      }
-      .stars img {
-        margin: 0;
-        height: 8px;
-        margin-left: 2px
-      }
-      #main {
-        flex-grow: 1;
-        background: white;
-        padding: 1.3rem;
-        padding-right: 1.5rem;
-        display: flex;
-        line-height: 1.3rem;
-        flex-direction: column;
-      }
-      .project {
-        margin-bottom: 0.8rem
-      }
-      .e-head, .project-head {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between
-      }
-      .section-header {
-        display: flex;
-      }
-      .section-header > .title {
-        font-size: 1.2rem;
-      }
-      .e-head, .project-head {
-        margin-top: 0.6rem;
-        font-weight: 700
-      }
-      .section-header .seperator {
-        background: black;
-        height: 1px;
-        align-self: center;
-        margin-left: 0.5rem;
-        flex-grow: 1
-      }
-      .section {
-        margin-bottom: 1rem
+        padding-bottom: 10rem
       }
       #container {
-        flex-direction: row;
+        background: white;
+        flex-direction: column;
         display: flex;
         width: 8.5in;
         height: 11in;
-        margin: 0 auto
+        margin: 0 auto;
+        padding: 2rem;
+        padding-top: 1rem;
       }
       img {
         height: 16px;
-        transform: translateY(25%);
-        margin-right: 8px;
-        -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
-        filter: invert(100%);
-        background: white;
+        margin-right: 4px;
       }
-      .card * {
-        display: inline
+      .left {
+        float: left;
       }
-
-      #card-container {
-        padding-top: 6px
+      .right {
+        float: right
       }
-
-      .card-title::after {
-        content: " — "
+      .section-title {
+        font-size: 24px
       }
-      .card-description {
-          font-weight: bold
+      .section {
+        margin-bottom: 12px;
       }
-      #subtitle {
-        font-size: 1.2rem;
-        margin-bottom: -18px
+      .separator-inline {
+        display: inline-block; 
+        width: 1px; 
+        background: black;
       }
-      #subtitle .sub {
-        font-size: 13.3px;
-        line-height: 1.2rem;
-        padding: 12px;
-        margin: 0;
-        margin-left: 10px
+      a {
+        color: inherit; 
+        text-decoration: inherit 
       }
-      #subtitle .sub li {
-        padding-left: 4px
+      .section-head {
+        display: flex;
+        align-items: center;
       }
-      #sidebar > *:not(:first-child) {
-        margin-left: 6px
+      .section-separator {
+        background: black;
+        height: 1px;
+        margin-top: 6px;
+        margin-left: 0.2rem;
+        flex-grow: 1
+      }
+      .stack::before {
+        content: "Stack: "
+      }
+      .technologies::before {
+        content: "Technologies: ";
+        font-weight: 800
+      }
+      .languages::before {
+        content: "Languages: ";
+        font-weight: 800
+      }
+      .item {
+        display: flex;
+        flex-direction: column
+      }
+      .item-head .title {
+        font-weight: 800;
+      }
+      .item-head {
+        margin-bottom: 4px;
+        margin-top: 12px;
+        line-height: 1.2rem
+      }
+      .right .title {
+        text-transform: lowercase
+      }
+      .description li {
+        line-height: 1.2rem
       }
   body
     #container
-      #sidebar
-        #name
-          | Aaron 
-          br
-          | Huang
-        #subtitle
-          span Student @ UC Berkeley
-          ul.sub
-            li Computer Science (B.A.)
-            li Graduating June 2022
-        #contact
-          ul
-            li
-              img(src="./ico/mail.svg" )
-              | aahuang@berkeley.edu
-            li
-              img(src="./ico/smartphone.svg" )
-              | 415.812.6317
-            li
-              img(src="./ico/linkedin.svg" )
-              | aaronkh
-            li
-              img(src="./ico/github.svg" )
-              | aaronkh
-        #skills
-          .title
-            | Skills
-          ul
-            li
-              div HTML5/CSS/JS
-            li
-              div NodeJS
-            li
-              div Python
-            li
-              div Java
-            li
-              div Android
-            li
-              div React + React Native
-            li
-              div Git
-      #main
-        #e.section
-          .section-header
-            .title Experience
-            .seperator
-          #e-container
-            .e-head
-              .e-title Soracom (Software Engineering Intern)
-              .e-date jun 2019 - current
-            .e-description
-              | Added surge pricing, location tracking, and remote management
-              | onto an electric scooter using  Soracom's cellular services and AWS.
-              | Created an Android app with React Native and 
-              | Stripe API for accepting payments and unlocking the scooter.
-              | Published articles and videos about the development process on Hackernoon.
-            .e-head
-              .e-title Data Science Society (General Member)
-              .e-date jan 2019 - jun 2019
-            .e-description 
-              | Determined the correlation between 
-              | congressional district, poverty, gun control strictness and gun injuries/deaths in the US with 
-              | bootstrapping and regression analysis. Used Python and JavaScript (Pandas, NumPy, d3.js) 
-              | for visualization and presentation at a biannual research symposium.
-            .e-head
-              .e-title Project Loaf (Mobile Development)
-              .e-date jun 2017 - aug 2017
-            .e-description 
-              | Designed and developed an Android app that allows storekeepers 
-              | to manage and optimize foot traffic in stores. Used multiple Raspberry Pi Zero W's to track customers' 
-              | location indoors using WiFi and Bluetooth probe requests.
-        #cards.section
-          .section-header
-            .title Relevant Coursework
-            .seperator
-          #card-container
-            .card
-              .card-description
-                | Principles and Techniques of Data Science (DATA 100)
-            .card
-              .card-description
-                | Designing Information Devices and Systems (EE 16A)
-            .card
-              .card-description
-                | Data Structures (CS 61B)
-        #projects.section
-          .section-header
-            .title Projects
-            .seperator
-          .project
-            .project-head
-              .project-name nowo's ark
-              .project-date HackSC (Apr 2019)
-            .project-desc
-              | Built an inexpensive flood detection and alert system for third world countries
-              | using a PVC pipe, a Qualcomm Dragonboard, Twilio SMS API, and a Cloudflare serverless worker.
-              | Used OmniSci for data visualization and analysis.
-              br
-              em (Awarded Cloudflare Best Use of Serverless and Best Use of Qualcomm 410c Dragonboard)
-            .project
-              .project-head
-                .project-name Muicrowave
-                .project-date SLO Hacks (Feb 2019)
-              .project-desc
-                | Built a web interface and Node.js Express server hosted on Google Cloud Platform to 
-                | turn a Craigslist-salvaged microwave smart with
-                | an Amazon Alexa skill, computer vision, and a surge pricing payment system.
-                br
-                em (Awarded Best IoT Hack and Best Use of Qualcomm 410c Dragonboard)
-            .project
-              .project-head
-                .project-name PictRNNary
-                .project-date CalHacks 5.0 (Nov 2018)
-              .project-desc
-                | Created a web app for an AI-powered pictionary game with speech and speaker recognition.
-                | Powered by Microsoft Azure APIs, a Node.js backend, and a recurrent neural network
-                | for generating images.
-                br
-                em (Awarded Best Use of Microsoft and Regional Microsoft Imagine Cup Semifinalist awards)
-            .project
-              .project-head
-                .project-name Blindsight
-                .project-date TechCrunch Hackathon (Sep 2018)
-              .project-desc
-                | Built an Android app with speech and object recognition, 
-                | Bluetooth support, and haptic feedback
-                | for an assistive smartwatch-like device for the visually impaired. Featured on Hackster.io,
-                | Makezine, CBS, and 2018 US-China Young Maker Competition.
-                br
-                em (Awarded Visa API, HERE Mobility SDK, and semi-finalist awards)
-            
+      .head
+        #name Aaron Huang 
+        #subtitle Computer Science Student @ UC Berkeley
+        .contact 
+          li#phone (415) 812-6317
+          .separator-inline
+          li#email 
+            img(src="./ico/mail.svg")
+            a(href="mailto:aahuang@berkeley.edu") aahuang@berkeley.edu 
+          .separator-inline
+          li#linkedin 
+            img(src="./ico/linkedin.svg")
+            a(href="https://www.linkedin.com/in/aaronkh") aaronkh
+          .separator-inline
+          li#github
+            img(src="./ico/github.svg")
+            a(href="https://www.github.com/aaronkh") aaronkh
+      .section
+        .section-head
+          .section-title Education
+          .section-separator
+        .section-inner 
+          .item-head 
+            .left 
+              .title 
+                b University of California, Berkeley 
+              .subtitle Bachelors of Arts in 
+                b Computer Science 
+            .right 
+              .title Aug 2018 - May 2022 (expected)
+      .section
+        .section-head 
+          .section-title Skills
+          .section-separator
+        .item-head
+          .technologies Node.js, React + React Native, Express, Android Studio, Pandas, Git
+          .languages Python, HTML5/CSS/JS, Java, SQL, Kotlin
+      .section
+        .section-head 
+          .section-title Experience
+          .section-separator
+        .section-inner
+          .item 
+            .item-head 
+              .left 
+                .title UC Berkeley (Data 100)
+                .subtitle Academic Intern
+              .right 
+                .title Jan 2020 - current
+            .description
+              li Helped run weekly labs to teach students data science fundamentals
+              li Helped debug student code written with various data science libraries (Pandas, NumPy, SciPy, PyTorch)
+          .item 
+            .item-head 
+              .left 
+                .title Soracom Global Inc. 
+                .subtitle Software Engineer Intern 
+              .right 
+                .title Jun 2019 - Jan 2020
+            .description 
+              li Added analytics and remote management capabilities onto an electric scooter using Soracom's cellular services
+              li Created an Android app with React Native and Stripe API for accepting payments and unlocking the scooter
+              li Published articles and videos about the development process on Hackernoon
+          .item 
+            .item-head 
+              .left 
+                .title Project Loaf 
+                .subtitle Mobile Developer 
+              .right 
+                .title Jun 2017 - Aug 2017 
+            .description 
+              li Designed and developed an Android app for storekeepers to visualize and optimize foot traffic in stores
+              li Developed a way to track customers' location indoors using WiFi and Bluetooth probe requests with Raspberry Pis
+      .section
+        .section-head 
+          .section-title Projects
+          .section-separator
+        .section-inner
+          .item
+            .item-head 
+              .left
+                .title Blindsight 
+                .subtitle.stack Android, Node.js, Python (OpenCV), Tensorflow, Raspberry Pi 
+              .right 
+                .title Sep 2018 
+            .description 
+              li Won Visa API, HERE Mobility SDK, and semi-finalist awards at TechCrunch Disrupt SF Hackathon
+              li Created a smartwatch device to assist the visually impaired through machine learning
+              li Used Python to perform object recognition and OCR
+              li Built a voice interface for Android with speech recognition and NLP APIs
+              li Featured on Hackster.io, Makezine, PYMNTS.com, and CBS
+          .item
+            .item-head 
+              .left
+                .title nowo's ark 
+                .subtitle.stack Node.js, Cloudflare Serverless Workers, OmniSci, Soracom Air, Arduino
+              .right 
+                .title Apr 2019 
+            .description 
+              li Semi-finalist in the China-US Young Maker Competition and awarded "Best use of Serverless" by Cloudflare at HackSC 2019
+              li Built an inexpensive flood detection and alert system for third world countries
+              li Selected flood-vulnerable areas with clustering and used OmniSci for data stream visualization and analysis
+          .item
+            .item-head 
+              .left
+                .title PictRNNary 
+                .subtitle.stack Bootstrap + JQuery, Node.js, Tensorflow, Keras, Microsoft Azure 
+              .right 
+                .title Nov 2018 
+            .description 
+              li Awarded Best Use of Microsoft and Regional Microsoft Imagine Cup Semifinalist awards at CalHacks 5.0
+              li Created a web interface for an AI-powered Pictionary game with speech and speaker recognition.
+              li Hosted a recurrent neural network on Microsoft Azure to generate SVG drawings
+          .item
+            .item-head 
+              .left
+                .title Bobafetch 
+                .subtitle.stack React Native, Stripe API, Python, Microsoft Azure, Arduino 
+              .right 
+                .title Nov 2019
+            .description 
+              li Won "Best Use of Hardware" and "3rd Place Overall" at CalHacks 6.0
+              li Created an automated boba barista machine and delivery robot in a weekend
+              li Built a customer-facing React Native tablet app for placing orders and buying bubble milk tea
+          //- .item
+          //-   .item-head 
+          //-     .left
+          //-       .title Augmented Reality for Visually Impaired People
+          //-       .subtitle.stack Microsoft Hololens, Unity (C#), Google Cloud Vision API
+          //-     .right 
+          //-       .title Sep 2019 - current
+          //-   .description 
+          //-     li Added gesture support to a Microsoft Hololens application aimed at helpingblind/visually impaired people navigate their surroundings
+          //-     li Worked on a more efficient wall detection method and obstacle warning system
