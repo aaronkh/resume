@@ -29,6 +29,9 @@ html
         line-height: 1.13;
         padding-bottom: 10rem
       }
+      html {
+        //- background:
+      }
       #container {
         background: white;
         flex-direction: column;
@@ -101,8 +104,14 @@ html
       .right .title {
         text-transform: lowercase
       }
+      .description {
+        list-style-position: outside;
+        margin: 0;
+        padding-left: 1.2rem;
+      }
       .description li {
-        line-height: 1.2rem
+        line-height: 1.2rem;
+        margin-bottom: 4px
       }
   body
     #container
@@ -142,7 +151,7 @@ html
           .section-separator
         .item-head
           .technologies Node.js, React + React Native, Express, Android Studio, Pandas, Git
-          .languages Python, HTML5/CSS/JS, Java, SQL, Kotlin
+          .languages Python, HTML5/CSS/JS, Java, SQL, Kotlin, C
       .section
         .section-head 
           .section-title Experience
@@ -152,12 +161,31 @@ html
             .item-head 
               .left 
                 .title UC Berkeley (Data 100)
+                .subtitle Tutor
+              .right 
+                .title Aug 2020 - current
+            ul.description
+              li Hosted virtual office hours to help teach data science concepts  (pandas, EDA, visualization, regression, classification) to over 1200 students remotely
+              li Graded exams and developed grading rubrics for weekly student-submitted homework assignments
+            .item-head 
+              .left 
                 .subtitle Academic Intern
               .right 
-                .title Jan 2020 - current
-            .description
+                .title Jan 2020 - Jun 2020
+            ul.description
               li Helped run weekly labs to teach students data science fundamentals
               li Helped debug student code written with various data science libraries (Pandas, NumPy, SciPy, PyTorch)
+          .item 
+            .item-head 
+              .left 
+                .title Farm Generations
+                .subtitle Frontend Developer Intern
+              .right 
+                .title Jul 2020 - current
+            ul.description
+              li Worked in a team to build a consumer-facing farm discovery and shopping portal in React Native
+              li Added Stripe integration onto an existing farm management app to accept credit card payments and manage user transactions
+              li Compiled and managed data from thousands of farms for use in Google's Firebase platform
           .item 
             .item-head 
               .left 
@@ -165,7 +193,7 @@ html
                 .subtitle Software Engineer Intern 
               .right 
                 .title Jun 2019 - Jan 2020
-            .description 
+            ul.description 
               li Added analytics and remote management capabilities onto an electric scooter using Soracom's cellular services
               li Created an Android app with React Native and Stripe API for accepting payments and unlocking the scooter
               li Published articles and videos about the development process on Hackernoon
@@ -176,7 +204,7 @@ html
                 .subtitle Mobile Developer 
               .right 
                 .title Jun 2017 - Aug 2017 
-            .description 
+            ul.description 
               li Designed and developed an Android app for storekeepers to visualize and optimize foot traffic in stores
               li Developed a way to track customers' location indoors using WiFi and Bluetooth probe requests with Raspberry Pis
       .section
@@ -187,16 +215,13 @@ html
           .item
             .item-head 
               .left
-                .title Blindsight 
-                .subtitle.stack Android, Node.js, Python (OpenCV), Tensorflow, Raspberry Pi 
+                .title Augmented Reality for Visually Impaired People
+                .subtitle.stack Microsoft Hololens, Unity (C#), Google Cloud Vision API
               .right 
-                .title Sep 2018 
-            .description 
-              li Won Visa API, HERE Mobility SDK, and semi-finalist awards at TechCrunch Disrupt SF Hackathon
-              li Created a smartwatch device to assist the visually impaired through machine learning
-              li Used Python to perform object recognition and OCR
-              li Built a voice interface for Android with speech recognition and NLP APIs
-              li Featured on Hackster.io, Makezine, PYMNTS.com, and CBS
+                .title Sep 2019 - current
+            ul.description 
+              li Added gesture support to a Microsoft Hololens application aimed at helping visually impaired people navigate their surroundings
+              li Worked on a more efficient wall detection method and obstacle warning system
           .item
             .item-head 
               .left
@@ -204,39 +229,30 @@ html
                 .subtitle.stack Node.js, Cloudflare Serverless Workers, OmniSci, Soracom Air, Arduino
               .right 
                 .title Apr 2019 
-            .description 
+            ul.description 
               li Semi-finalist in the China-US Young Maker Competition and awarded "Best use of Serverless" by Cloudflare at HackSC 2019
               li Built an inexpensive flood detection and alert system for third world countries
               li Selected flood-vulnerable areas with clustering and used OmniSci for data stream visualization and analysis
-          .item
-            .item-head 
-              .left
-                .title PictRNNary 
-                .subtitle.stack Bootstrap + JQuery, Node.js, Tensorflow, Keras, Microsoft Azure 
-              .right 
-                .title Nov 2018 
-            .description 
-              li Awarded Best Use of Microsoft and Regional Microsoft Imagine Cup Semifinalist awards at CalHacks 5.0
-              li Created a web interface for an AI-powered Pictionary game with speech and speaker recognition.
-              li Hosted a recurrent neural network on Microsoft Azure to generate SVG drawings
-          .item
-            .item-head 
-              .left
-                .title Bobafetch 
-                .subtitle.stack React Native, Stripe API, Python, Microsoft Azure, Arduino 
-              .right 
-                .title Nov 2019
-            .description 
-              li Won "Best Use of Hardware" and "3rd Place Overall" at CalHacks 6.0
-              li Created an automated boba barista machine and delivery robot in a weekend
-              li Built a customer-facing React Native tablet app for placing orders and buying bubble milk tea
           //- .item
           //-   .item-head 
           //-     .left
-          //-       .title Augmented Reality for Visually Impaired People
-          //-       .subtitle.stack Microsoft Hololens, Unity (C#), Google Cloud Vision API
+          //-       .title Bobafetch 
+          //-       .subtitle.stack React Native, Stripe API, Python, Microsoft Azure, Arduino 
           //-     .right 
-          //-       .title Sep 2019 - current
-          //-   .description 
-          //-     li Added gesture support to a Microsoft Hololens application aimed at helpingblind/visually impaired people navigate their surroundings
-          //-     li Worked on a more efficient wall detection method and obstacle warning system
+          //-       .title Nov 2019
+          //-   ul.description 
+          //-     li Won "Best Use of Hardware" and "3rd Place Overall" at CalHacks 6.0
+          //-     li Created an automated boba barista machine and delivery robot in a weekend
+          //-     li Built a customer-facing React Native tablet app for placing orders and buying bubble milk tea
+        .item
+          .item-head 
+            .left
+              .title Blindsight 
+              .subtitle.stack Android, Node.js, Python (OpenCV), Tensorflow, Raspberry Pi 
+            .right 
+              .title Sep 2018 
+          ul.description 
+            li Won Visa API, HERE Mobility SDK, and semi-finalist awards at TechCrunch Disrupt SF Hackathon
+            li Created a smartwatch device to assist the visually impaired through machine learning
+            li Used Python to perform object recognition and OCR
+            li Built a voice interface for Android with speech recognition and NLP APIs
