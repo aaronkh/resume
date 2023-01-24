@@ -1,0 +1,161 @@
+.head {
+  text-align: center;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+  font-size: 14px;
+  padding: 0;
+  line-height: 1.2rem;
+}
+#name {
+  margin: 12px;
+}
+#linkedin {
+  display: inherit;
+}
+#github {
+  display: inherit;
+}
+#linkedin::before {
+  content: "https://www.linkedin.com/in/aaronkh";
+  color: white;
+  position: absolute;
+  z-index: -1;
+}
+#github::before {
+  content: "https://www.github.com/aaronkh";
+  color: white;
+  position: absolute;
+  z-index: -1;
+}
+#container {
+  background: white;
+  flex-direction: column;
+  display: flex;
+  width: 8.5in;
+  height: 11in;
+  margin: 0 auto;
+  padding: 2.2rem;
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-around;
+}
+img {
+  height: 16px;
+  margin-right: 4px;
+}
+.right {
+  float: right;
+}
+.section-title {
+  font-size: 24px;
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+.section {
+  margin-bottom: 4px;
+}
+.separator-inline {
+  display: inline-block;
+  width: 1px;
+  background: black;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+.section-head {
+  display: flex;
+  align-items: center;
+}
+.section-separator {
+  background: black;
+  height: 1px;
+  margin-top: 6px;
+  margin-left: 0.5rem;
+  flex-grow: 1;
+}
+.stack::before {
+  content: "Stack: ";
+}
+.stack {
+  display: none;
+}
+.technologies::before {
+  content: "Technologies: ";
+  font-weight: bold;
+}
+.languages::before {
+  content: "Languages: ";
+  font-weight: bold;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+}
+.item-head .title {
+  font-weight: bold;
+}
+.item-head {
+  margin-bottom: 4px;
+  margin-top: 8px;
+  line-height: 1.2rem;
+}
+.description {
+  list-style-position: outside;
+  margin: 0;
+  padding-left: 1.2rem;
+}
+.description li {
+  line-height: 1.2rem;
+  margin-bottom: 2px;
+}
+.description li::after {
+  content: ";";
+  position: absolute;
+  color: white;
+}
+#coursework {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+#coursework b {
+  margin-right: 0.5rem;
+}
+
+.head > * {
+  margin-bottom: 6px;
+}
+
+.head .contact li {
+  display: inline-flex;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.head #name {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  margin-top: 16px;
+}
+
+body {
+  /* background: grey; */
+}
+
+.contact #phone > img,
+.contact #email > img {
+  margin-top: 1px;
+}
+
+.contact img {
+  margin-right: 6px;
+}
