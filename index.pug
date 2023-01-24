@@ -1,0 +1,168 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+    title resume
+    link(href="head.css" rel="stylesheet")
+  body
+    #container
+      .head
+        #name Aaron Huang 
+        .contact 
+          li#phone 
+            img(src="./ico/phone-call.svg")
+            a (415) 812-6317
+          .separator-inline
+          li#email 
+            img(src="./ico/mail.svg")
+            a(href="mailto:huang.aaron03@gmail.com") huang.aaron03@gmail.com
+          .separator-inline
+          li 
+            img(src="./ico/linkedin.svg")
+            a(href="https://www.linkedin.com/in/aaronkh")#linkedin aaronkh
+          .separator-inline
+          li
+            img(src="./ico/github.svg")
+            a(href="https://www.github.com/aaronkh")#github aaronkh
+      .section
+        .section-head 
+          .section-title Experience
+          .section-separator
+        .section-inner
+          .item 
+            .item-head 
+              .right 
+                .title AUG 2022 - JAN 2023
+              .left 
+                .title Google
+                .subtitle Software Engineer
+            ul.description
+              li Updated Android TV running on Chromecast devices to deliver firmware updates to millions of remotes via the Google Play Store
+              li Implemented new features for managing internal builds across Nest-branded devices
+              li Increased test coverage to over 75% across Chromecast certificate signing code
+          .item
+            .item-head
+              .right
+                .title MAY 2021 - AUG 2021
+              .left
+                .title Amazon
+                .subtitle Software Development Engineer Intern
+              ul.description
+                li Added on-device testing functionality to a pre-existing Android application with Java and Dagger
+                li Created new modals for a customer-facing dashboard to parse and send sensitive biometric data to a remote service in React
+                li Added new methods to a Coral web service to relay JSON payloads to IoT Android devices via MQTT
+                li Designed, built, and tested a new feature for Amazon One after gathering requirements from the Research team
+          .item 
+            .item-head 
+              .right 
+                .title JAN 2021 - MAY 2022
+              .left 
+                .title UC Berkeley (Department of Data Science)
+                .subtitle Teaching Assistant (GSI)
+            ul.description
+              li Led large data science discussion sections of about 30 students virtually 
+              li Held weekly office hours and assisted in the creation of course content
+          .item 
+            .item-head 
+              .right 
+                .title AUG 2020 - DEC 2020
+              .left 
+                .subtitle Tutor
+            ul.description
+              li Hosted virtual office hours to help teach data science concepts  (NumPy/SciPy, EDA, visualization, regression, classification) to over 1200 students remotely
+              li Graded exams and developed course materials for weekly student homework assignments
+          .item 
+            .item-head 
+              .right 
+                .title JUL 2020 - SEP 2020
+              .left 
+                .title Farm Generations
+                .subtitle Frontend Developer Intern
+            ul.description
+              li Worked on an Agile development team to build a consumer-facing farm discovery and shopping portal in React Native
+              li Added Stripe integration onto an existing farm management app to accept payments and manage user transactions
+              li Cleaned and managed data from thousands of farms for use in Google's Firebase platform
+          .item 
+            .item-head 
+              .right 
+                .title JUN 2019 - JAN 2020
+              .left 
+                .title Soracom Global Inc. 
+                .subtitle Software Engineer Intern 
+            ul.description 
+              li Added an analytics and payment platform with the Stripe API onto an electric scooter to demonstrate Soracom's cellular services
+              li Created an Android app with React Native to remotely manage an electric scooter while reducing data costs by 66%
+              li Co-authored technical articles on Hacker Noon with hundreds of hours read and starred in demonstration videos on YouTube
+      .section
+        .section-head
+          .section-title Education
+          .section-separator
+        .section-inner 
+          .item-head 
+            .right 
+              .title AUG 2018 - MAY 2022
+            .left 
+              .title University of California, Berkeley 
+              .subtitle
+                b Major: 
+                span Computer Science (B.A.)
+            #coursework
+              b Relevant Coursework:
+              span Algorithms, Data Structures, Computer Security, Machine Structures,Operating Systems, Information Devices and Systems, Deep Neural Networks, Introduction to Database Systems, Principles and Techniques of Data Science
+      .section
+        .section-head 
+          .section-title Technical Skills
+          .section-separator
+        .item-head
+          .technologies Android, Linux kernel, NumPy/SciPy, TensorFlow + Keras, Flask, MongoDB, Node.js, React + React Native, Git
+          .languages Java, Kotlin, Python, HTML5/CSS/JavaScript, Typescript, SQL, C
+      
+      //- .section
+      //-   .section-head 
+      //-     .section-title Projects
+      //-     .section-separator
+      //-   .section-inner
+          //- .item
+          //-   .item-head 
+          //-     .right 
+                //- .title SEP 2019 - current
+            //-   .left
+            //-     .title Augmented Reality for Visually Impaired People
+            //-     .subtitle.stack Microsoft Hololens, Unity (C#), Google Cloud Vision API
+            //- ul.description 
+            //-   li Added gesture support to a Microsoft Hololens application aimed at helping visually impaired people navigate their surroundings
+            //-   li Worked on a more efficient wall detection method and obstacle warning system
+          //- .item
+          //-   .item-head 
+          //-     .right 
+                //- .title APR 2019 
+            //-   .left
+            //-     .title nowo's ark 
+            //-     .subtitle.stack Node.js, Cloudflare Serverless Workers, OmniSci, Soracom Air, Arduino
+            //- ul.description 
+            //-   li Recruited and guided a small team to be named a semi-finalist in the China-US Young Maker Competition and "Best use of Serverless" by Cloudflare at HackSC 2019
+            //-   li Built a prototype flood detection and alert system with Cloudflare workers and an Arduino, costing 90% less than similar systems in current use
+          //- .item
+          //-   .item-head 
+          //-     .right 
+                //- .title Nov 2019
+            //-   .left
+            //-     .title Bobafetch 
+            //-     .subtitle.stack React Native, Stripe API, Python, Microsoft Azure, Arduino 
+            //- ul.description 
+            //-   li Worked with an Agile development team to win "Best Use of Hardware" and "3rd Place Overall" at CalHacks 6.0 over thousands of other competitors
+            //-   li Created an automated boba barista machine and delivery robot in a weekend to reduce bubble milk tea operating costs by 75%
+            //-   li Built a customer-facing React Native tablet app for placing orders and buying bubble milk tea
+        //- .item
+        //-   .item-head 
+        //-     .right 
+              //- .title SEP 2018 
+          //-   .left
+          //-     .title Blindsight 
+          //-     .subtitle.stack Android, Node.js, Python (OpenCV), Tensorflow, Raspberry Pi 
+          //- ul.description 
+          //-   li Won semi-finalist award at TechCrunch Disrupt SF Hackathon and featured on CBS news amongst over a hundred other teams
+          //-   li Used OpenCV in Python to create an assistive device with on-device object recognition, machine learning, and optical character recognition (OCR)
+          //-   li Built a voice interface for Android with speech recognition and Tensorflow NLP models
