@@ -38,6 +38,7 @@ body {
   height: 11in;
   margin: 0 auto;
   padding: 2.2rem;
+  padding-bottom: 2.5rem;
   display: flex; 
   flex-direction: column;
   justify-content: space-around;
@@ -79,6 +80,7 @@ a {
 }
 .stack::before {
   content: "Stack: ";
+  margin-right: 6px;
 }
 .stack {
   display: none;
