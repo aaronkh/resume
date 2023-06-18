@@ -5,7 +5,7 @@
 body {
   font-family: Helvetica, sans-serif;
   margin: 0;
-  font-size: 14px;
+  font-size: 12.5px;
   padding: 0;
   line-height: 1.2rem;
 }
@@ -39,6 +39,7 @@ body {
   margin: 0 auto;
   padding: 2.2rem;
   padding-bottom: 2.5rem;
+  padding-top: 2.5rem;
   display: flex; 
   flex-direction: column;
   justify-content: space-around;
@@ -138,7 +139,8 @@ a {
 }
 
 .head #name {
-  font-size: 36px;
+  font-size: 32px;
+  margin: 8px;
   font-weight: 600;
 }
 
@@ -163,10 +165,10 @@ body {
 }
 
 .vertical-separator {
-  width: 1.5px;
+  width: 1px;
   margin: 2px;
-  margin-left: 8px;
-  margin-right: 8px;
+  margin-left: 6px;
+  margin-right: 6px;
   display: inline-block;
   background-color: black;
 }

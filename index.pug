@@ -11,6 +11,10 @@ html
       .head
         #name Aaron Huang 
         .contact 
+          li#location
+            img(src="./ico/map-pin.svg")
+            a San Francisco
+          .separator-inline
           li#phone 
             img(src="./ico/phone-call.svg")
             a (415) 812-6317
@@ -39,9 +43,10 @@ html
                 .title Google
                 .subtitle Software Engineer
             ul.description
-              li Added functionality to the Android TV operating system running on Chromecast devices to deliver firmware updates to millions of remotes via the Google Play Store
-              li Built and tested an internal tool in Kotlin for summarizing changes in pre-release device firmware builds across all Google Nest&#8209;  branded products
-              li Increased Chromecast security by increasing JUnit test coverage to 75% from 0% across on-device code for receiving and verifying signed certificates
+              li Developed a firmware update delivery system for millions of remotes via Google Play Store on Chromecast devices running Android TV operating system
+              //- li Added functionality to the Android TV operating system running on Chromecast devices to deliver firmware updates to millions of remotes via the Google Play Store
+              li Built and tested an internal tool in Kotlin to summarize changes in pre-release device firmware builds across all Google Nest branded products
+              li Increased JUnit test coverage by 75% on code responsible for receiving and verifying signed certificates on Chromecast devices
           .item
             .item-head
               .right
@@ -50,7 +55,7 @@ html
                 .title Amazon
                 .subtitle Software Development Engineer Intern
               ul.description
-                li Added on-device testing functionality to the Android application running on Amazon One devices with Java and Dagger
+                li Implemented on-device testing functionality for the Android application running on Amazon One devices with Java and Dagger
                 li Created new modal windows for a customer-facing dashboard to parse and send sensitive biometric data to a remote service in React
                 li Added new methods to a Coral web service to relay JSON payloads to IoT Android devices via MQTT
                 li Designed, built, and tested new features for Amazon One after gathering requirements from the Research team
@@ -74,8 +79,8 @@ html
                 .subtitle Frontend Developer Intern
             ul.description
               li Worked on an Agile development team to build a consumer-facing farm discovery and shopping portal in React Native
-              li Added Stripe integration onto an existing farm management app to accept payments and manage user transactions
-              li Cleaned and managed data from thousands of farms for use in Google's Firebase platform
+              li Integrated Stripe API integration into an existing farm management app to accept payments and manage user transactions
+              //- li Cleaned and managed data from thousands of farms for use in Google's Firebase platform
           .item 
             .item-head 
               .right 
@@ -84,7 +89,7 @@ html
                 .title Soracom Global Inc. 
                 .subtitle Software Engineer Intern 
             ul.description 
-              li Added an analytics and payment platform with the Stripe API onto an electric scooter to demonstrate Soracom's cellular services
+              //- li Added an analytics and payment platform with the Stripe API onto an electric scooter to demonstrate Soracom's cellular services
               li Created an Android app with React Native to remotely manage an electric scooter while reducing data costs by 66%
               li 
                 | Co-authored technical articles on 
@@ -118,25 +123,25 @@ html
                 .title Bobafetch 
                 .subtitle.stack React Native, Stripe API, Python, Microsoft Azure, Arduino 
             ul.description 
-              li Worked with an Agile development team to win "Best Use of Hardware" and "3rd Place Overall" at 
+              li Collaborated with an Agile development team to win "Best Use of Hardware" and "3rd Place Overall" at 
                 a(href="https://devpost.com/software/bobafetch") CalHacks 6.0 
-                | over thousands of other competitors
-              li Created an automated boba barista machine and delivery robot in a weekend to reduce bubble milk tea operating costs by 75%
+                | over 1000+ competitors
+              li Created an automated boba barista machine and delivery robot in a weekend to reduce bubble milk tea operating costs by 80%
               li Built a customer-facing React Native tablet app for placing orders and buying bubble milk tea
-          //- .item
-          //-   .item-head 
-          //-     .left
-          //-       .title Blindsight 
-          //-       .subtitle.stack Android, Node.js, Python (OpenCV), Tensorflow, Raspberry Pi 
-          //-   ul.description 
-          //-     li Won semi-finalist award at TechCrunch Disrupt SF Hackathon and featured on CBS news out of 100+ other teams
-          //-     li Used OpenCV in Python to create an assistive device with on-device object recognition, machine learning, and optical character
-          //-     | recognition (OCR)
-          //-     li Built a voice interface for Android with speech recognition and Tensorflow NLP models
+          .item
+            .item-head 
+              .left
+                .title Blindsight 
+                .subtitle.stack Android, Node.js, Python (OpenCV), Tensorflow, Raspberry Pi 
+            ul.description 
+              li Won semi-finalist award at TechCrunch Disrupt SF Hackathon and featured on CBS news out of 100+ other teams
+              li Used OpenCV in Python to create an assistive device with on-device object recognition, machine learning, and optical character
+              | recognition (OCR)
+              li Designed and implemented a voice interface for Android with speech recognition and Tensorflow NLP models
       .section
         .section-head 
           .section-title Technical Skills
           .section-separator
         .item-head
-          .technologies Android, Linux kernel, NumPy/SciPy, TensorFlow + Keras, Flask, Dagger, MongoDB, Node.js, React + React Native, Git, Protocol Buffers
+          .technologies Android, Linux kernel, REST APIs, Node.js, React + React Native, GraphQL, Git, Protocol Buffers, Flask, Dagger, MongoDB, PostgreSQL
           .languages Java, Kotlin, Python, HTML5/CSS/JavaScript, Typescript, SQL, C/C++, Go
