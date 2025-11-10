@@ -5,7 +5,7 @@
 body {
   font-family: Helvetica, sans-serif;
   margin: 0;
-  font-size: 12.5px;
+  font-size: 13px;
   padding: 0;
   line-height: 1.2rem;
 }
@@ -89,6 +89,7 @@ a {
 .technologies::before {
   content: "Technologies: ";
   font-weight: bold;
+  margin-left: -2px;
 }
 .languages::before {
   content: "Languages: ";
